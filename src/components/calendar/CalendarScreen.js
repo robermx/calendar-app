@@ -6,18 +6,21 @@ import moment from 'moment';
 import { CalendarEvent } from './CalendarEvent';
 import { CalendarModal } from './CalendarModal';
 import { Navbar } from '../ui/Navbar';
+
 import { uiOpenModal } from '../../actions/ui';
+import { eventSetActive } from '../../actions/events';
 
 import 'react-big-calendar/lib/css/react-big-calendar.css';
+import { AddNewFab } from '../ui/AddNewFab';
 
 const localizer = momentLocalizer(moment);
 
 const events = [
   {
-    title: 'Cumpleaños de Arón',
+    title: 'josh birthday',
     start: moment().toDate(),
     end: moment().add(2, 'hour').toDate(),
-    notes: 'Comprar el pastel',
+    notes: 'Buy a duck',
     user: {
       _id: '123',
       name: 'John',
@@ -36,7 +39,7 @@ const CalendarScreen = () => {
   };
 
   const onSelectEvent = (e) => {
-    console.log(e);
+    dispatch(eventSetActive(e));
   };
 
   const onViewChange = (e) => {
@@ -76,6 +79,7 @@ const CalendarScreen = () => {
             event: CalendarEvent,
           }}
         />
+        <AddNewFab />
         <CalendarModal />
       </div>
     </>
