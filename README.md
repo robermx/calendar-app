@@ -4,10 +4,14 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Front-End
 
-design and structure of Calendar
-Use of Components
-Modals
-Redux configuration
-CRUD local
-MomentJS
-Dates()
+```
+
+- Design and structure of Calendar
+- Use of Components
+- Modals
+- Redux configuration
+- CRUD local
+- MomentJS
+- Dates()
+
+```
